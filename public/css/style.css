@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+body {
+    font-family: 'Lora', serif;
+}
+
+.uk-navbar-left, .uk-navbar-container{ 
+    background-color:none !important;
+    background:none !important;
+}
+
+.uk-container { 
+    padding-top: 20px;
+}
+
+.uk-button-primary { 
+    background-color:#FF5300 !important; 
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.uk-button-primary:hover{
+    background-color: #0e0030 !important;
+    border-radius: 6px;
+}
