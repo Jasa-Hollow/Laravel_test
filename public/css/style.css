@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Lora', serif;
+    margin-bottom: 100px;
 }
 
 .uk-navbar-left, .uk-navbar-container{ 
@@ -23,4 +24,8 @@ body {
 .uk-button-primary:hover{
     background-color: #0e0030 !important;
     border-radius: 6px;
+}
+
+.uk-navbar-right {
+    padding-right: 10px;
 }
