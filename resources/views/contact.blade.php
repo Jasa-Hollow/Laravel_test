@@ -39,3 +39,14 @@
     </a>
 @endsection
 <!-- ............................................... -->
+
+<!-- ............................................... -->
+<!-- Tercera tarjeta -->
+@section('card3')
+    <h2 class="header-text">Posts</h2>
+    <p>Ver los posts</p>
+    <a href="/post/create">
+        <button class="uk-button uk-button-primary">Go!</button>
+    </a>
+@endsection
+<!-- ............................................... -->

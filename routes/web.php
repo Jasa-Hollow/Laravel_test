@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 // Se tiene que importar la clase para su uso.
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostsController;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Support\Facades\DB;
-use App\Models\Articulo;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,65 +27,17 @@ use App\Models\Articulo;
 // -----------------------------------------------------------------------
 // Rutas básicas de un sitio web.
 Route::get('/', [PagesController::class, 'index']);
-Route::get('/index', [PagesController::class, 'index']);
+Route::get('/home', [PagesController::class, 'index']);
 Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
 // -----------------------------------------------------------------------
 
 // -----------------------------------------------------------------------
-// Pruebas con Eloquent
-Route::get('/select', function() {
-    /* Consulta General de una tabla.
-    $articulos = Articulo::all();
-    foreach ($articulos as $result){
-        echo $result->name . ' - $' . $result->price . "<br>";
-    }
-    */
-    // Consulta con condicional.
-    $articulos = Articulo::where("name", "Nezuko Nendoroid")->get();
+// Rutas para el CRUD
+Route::get('/post/', [PostsController::class, 'index']);
+Route::get('/post/index', [PostsController::class, 'index']);
 
-    return $articulos;
-});
-
-Route::get('/insert', function() {
-    $articulos = new Articulo ;
-
-    $articulos->name = "Pantalones";
-    $articulos->price = 20.00;
-
-    $articulos->save();
-});
-
-Route::get('/update', function() {
-    $articulos = Articulo::find(4) ;
-
-    if ($articulos){
-        $articulos->name = "Pantalones";
-        $articulos->price = 10.00;
-
-        $articulos->save();
-    }
-
-    else {
-        return "Error";
-    }
-});
-
-Route::get('/delete', function() {
-    $articulos = Articulo::find(3) ;
-
-    if ($articulos){
-        $articulos->delete();
-    }
-    else {
-        return "Error";
-    }
-});
-
-Route::get('/manyInsert', function() {
-    Articulo::create(
-        ["name" => "Impresora", "price" => 100.00]
-    );
-});
-
+Route::get('/post/create', [PostsController::class, 'create']);
+Route::get('/post/update', [PostsController::class, 'update']);
+Route::get('/post/delete', [PostsController::class, 'destroy']);
 // -----------------------------------------------------------------------
