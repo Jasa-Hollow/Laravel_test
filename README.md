@@ -21,11 +21,17 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## How it see?
+## First tests
 
 It's very simple, using UIkit instead of Bootstrap.
 
-![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/secondTest.png) 
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/secondTest.png)
+
+## How it see now?
+
+Well, two days after, I made litle changes, and already preparing things for the CRUD.
+
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/thirdTest.png)
 
 ## License
 
