@@ -2,6 +2,13 @@
 @extends('layouts.template')
 
 <!-- ............................................... -->
+<!-- Título de la pestaña -->
+@php
+    $title = "About";
+@endphp
+<!-- ............................................... -->
+
+<!-- ............................................... -->
 <!-- Encabezado -->
 @section('header')
     <h1 class="uk-heading-small header-text">About</h1>

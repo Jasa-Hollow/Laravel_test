@@ -2,10 +2,16 @@
 @extends('layouts.template')
 
 <!-- 
-    Se llama la primera sección.
-    Todo lo que vaya dentro de esa instrucción,
+    Todo lo que vaya dentro de esas instrucción,
     será el contenido de la estructura de la plantilla.
 -->
+
+<!-- ............................................... -->
+<!-- Título de la pestaña -->
+@php
+    $title = "Index";
+@endphp
+<!-- ............................................... -->
 
 <!-- ............................................... -->
 <!-- Encabezado -->
