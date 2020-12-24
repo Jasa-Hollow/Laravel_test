@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 // Se tiene que importar la clase para su uso.
 use App\Http\Controllers\PagesController;
+use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Support\Facades\DB;
+use App\Models\Articulo;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +24,6 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
-
 // -----------------------------------------------------------------------
 // Rutas básicas de un sitio web.
 Route::get('/', [PagesController::class, 'index']);
@@ -37,26 +33,59 @@ Route::get('/contact', [PagesController::class, 'contact']);
 // -----------------------------------------------------------------------
 
 // -----------------------------------------------------------------------
-// Rutas para la interacción con la BD de MySQL
-Route::get('/insert', function () {
-    DB::insert('insert into articulos (id, name, price) values (?, ?, ?)', [1, 'Jarrón', 15.2]);
+// Pruebas con Eloquent
+Route::get('/select', function() {
+    /* Consulta General de una tabla.
+    $articulos = Articulo::all();
+    foreach ($articulos as $result){
+        echo $result->name . ' - $' . $result->price . "<br>";
+    }
+    */
+    // Consulta con condicional.
+    $articulos = Articulo::where("name", "Nezuko Nendoroid")->get();
+
+    return $articulos;
 });
 
-Route::get('/select', function () {
-    //Se almacena una consulta en un array.
-    $resultados = DB::select('select * from articulos where id = ?', [1]);
+Route::get('/insert', function() {
+    $articulos = new Articulo ;
 
-    foreach ($resultados as $articulo){
-        echo $articulo->name . $articulo->price;
+    $articulos->name = "Pantalones";
+    $articulos->price = 20.00;
+
+    $articulos->save();
+});
+
+Route::get('/update', function() {
+    $articulos = Articulo::find(4) ;
+
+    if ($articulos){
+        $articulos->name = "Pantalones";
+        $articulos->price = 10.00;
+
+        $articulos->save();
+    }
+
+    else {
+        return "Error";
     }
 });
 
-Route::get('/update', function () {
-    DB::update('update articulos set name = "Vaso" where id = ?', [1]);
+Route::get('/delete', function() {
+    $articulos = Articulo::find(3) ;
+
+    if ($articulos){
+        $articulos->delete();
+    }
+    else {
+        return "Error";
+    }
 });
 
-Route::get('/delete', function () {
-    DB::delete('delete from articulos where id = ?', [1]);
+Route::get('/manyInsert', function() {
+    Articulo::create(
+        ["name" => "Impresora", "price" => 100.00]
+    );
 });
 
 // -----------------------------------------------------------------------
