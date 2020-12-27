@@ -4,28 +4,23 @@
 <!-- ............................................... -->
 <!-- Título de la pestaña -->
 @php
-    $title = "Posts";
+$title = "Hilos de Fuego";
 @endphp
 <!-- ............................................... -->
 
 <!-- ............................................... -->
 <!-- Encabezado -->
-@section('conten')
-    <form method="post">
-        <fieldset class="uk-fieldset">
-
-            <legend class="uk-legend">Legend</legend>
-
-            <div class="uk-margin">
-                <input class="uk-input" name="title" type="text" placeholder="Input">
+@section('videos')
+    @foreach ($videos as $video)
+        <div class="uk-width-1-2@m">
+                <div class="uk-card uk-card-default uk-card-body">
+                    <h2 class="header-text">{{ $video->title }}</h2>
+                    <iframe width="500px" height="300px" src="{{ $video->zelda }}" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture" allowfullscreen>
+                    </iframe>
+                </div>
             </div>
-
-            <div class="uk-margin">
-                <textarea class="uk-textarea" name="body" rows="5" placeholder="Textarea"></textarea>
-            </div>
-
-            <button type="submit" class="uk-button uk-button-primary"> Send </button>
-        </fieldset>
-    </form>
+    @endforeach
 @endsection
 <!-- ............................................... -->

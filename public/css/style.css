@@ -19,13 +19,23 @@ body {
     color: #fff;
     border-radius: 3px;
     margin-right: 10px;
-}
-
-.uk-button-primary:hover{
+} .uk-button-primary:hover{
     background-color: #0e0030 !important;
     border-radius: 6px;
 }
 
 .uk-navbar-right {
     padding-right: 10px;
+}
+
+.youtube-btn {
+    color: gray;
+} .youtube-btn:hover {
+    color: red;
+}
+
+.icon-btn {
+    color: #f04305;
+} .icon-btn:hover {
+    color: #0e0030;
 }

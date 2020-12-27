@@ -14,6 +14,7 @@
 
     <!-- Script JS -->
     <script src="{{ asset('js/uikit.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/05f4903dc9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="uk-cover-container uk-height-medium">
@@ -24,19 +25,17 @@
                     <img src="{{ asset('img/logo_jasa.png') }}">
                 </a>
                 <ul class="uk-navbar-nav">
-                    <li><a href="/">Home</a></li>
                     <li>
-                        <a href="/about">About</a>
+                        <a href="/"><i class="fas fa-home"></i> Home</a>
                     </li>
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a href="/about"><i class="fas fa-user-astronaut"></i> About</a>
                     </li>
-                </ul>
-            </div>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
                     <li>
-                        <button class="uk-button uk-button-primary">Login</button>
+                        <a href="/contact"><i class="fas fa-feather"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a href="/post/"><i class="fab fa-youtube"></i> Videos</a>
                     </li>
                 </ul>
             </div>
@@ -44,24 +43,23 @@
         <div class="uk-position-center uk-text-center">
             @yield('header')
         </div>
-
     </div>
     <div class="uk-container uk-text-center">
         <section uk-grid>
-            <div class="uk-width-1-2@m">
+            <div class="uk-width-1-3@m">
                 <div class="uk-card uk-card-default uk-card-body">
                     <!-- Haciendo uso de "Blade" de Laravel. -->
                     @yield("card1")
                 </div>
             </div>
 
-            <div class="uk-width-1-2@m">
+            <div class="uk-width-1-3@m">
                 <div class="uk-card uk-card-default uk-card-body">
                     @yield('card2')
                 </div>
             </div>
 
-            <div class="uk-width-1">
+            <div class="uk-width-1-3@m">
                 <div class="uk-card uk-card-default uk-card-body">
                     @yield('card3')
                 </div>

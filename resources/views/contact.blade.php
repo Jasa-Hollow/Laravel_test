@@ -23,8 +23,8 @@
 @section('card1')
     <h2 class="header-text">About</h2>
     <p>Acerca de don Yo</p>
-    <a href="/about">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <a href="/about" class="icon-btn">
+        <i class="fas fa-user-astronaut fa-4x">Go!</i>
     </a>
 @endsection
 <!-- ............................................... -->
@@ -34,8 +34,8 @@
 @section('card2')
     <h2 class="header-text">Index</h2>
     <p>Página principal</p>
-    <a href="/">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <a href="/" class="icon-btn">
+        <i class="fas fa-home fa-4x"></i>
     </a>
 @endsection
 <!-- ............................................... -->
@@ -44,9 +44,9 @@
 <!-- Tercera tarjeta -->
 @section('card3')
     <h2 class="header-text">Posts</h2>
-    <p>Ver los posts</p>
-    <a href="/post/create">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <p>Ver los videos de "Hilos de Fuego"</p>
+    <a href="/post/" class="youtube-btn">
+        <i class="fab fa-youtube fa-4x"></i>
     </a>
 @endsection
 <!-- ............................................... -->
