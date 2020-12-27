@@ -9,7 +9,7 @@
 <!-- ............................................... -->
 <!-- Título de la pestaña -->
 @php
-    $title = "Index";
+    $title = "Home";
 @endphp
 <!-- ............................................... -->
 
@@ -29,8 +29,8 @@
 @section('card1')
     <h2 class="header-text">About</h2>
     <p>Acerca de don Yo</p>
-    <a href="/about">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <a href="/about" class="icon-btn">
+        <i class="fas fa-user-astronaut fa-4x">Go!</i>
     </a>
 @endsection
 <!-- ............................................... -->
@@ -40,8 +40,8 @@
 @section('card2')
     <h2 class="header-text">Contact</h2>
     <p>Contáctame así es</p>
-    <a href="/contact">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <a href="/contact" class="icon-btn">
+        <i class="fas fa-feather fa-4x">Go!</i>
     </a>
 @endsection
 <!-- ............................................... -->
@@ -50,9 +50,9 @@
 <!-- Tercera tarjeta -->
 @section('card3')
     <h2 class="header-text">Posts</h2>
-    <p>Ver los posts</p>
-    <a href="/post/create">
-        <button class="uk-button uk-button-primary">Go!</button>
+    <p>Ver los videos de "Hilos de Fuego"</p>
+    <a href="/post/" class="youtube-btn">
+        <i class="fab fa-youtube fa-4x"></i>
     </a>
 @endsection
 <!-- ............................................... -->

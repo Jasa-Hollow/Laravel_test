@@ -2,11 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 
+// -----------------------------------------------------------------------
 // Se tiene que importar la clase para su uso.
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\PostsController;
+// -----------------------------------------------------------------------
+
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Support\Facades\DB;
+use App\Models\Video;
 
 /*
 |--------------------------------------------------------------------------

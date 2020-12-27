@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Auth\EloquentUserProvider;
+use Illuminate\Support\Facades\DB;
+use App\Models\Video;
 
 class PostsController extends Controller
 {
@@ -13,7 +16,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        return view("post.posts");
+        $videos = DB::table('videos')->get();
+        return view('post.posts')
+        ->with('title', 'Videos')
+        ->with('videos', $videos);
     }
 
     /**
