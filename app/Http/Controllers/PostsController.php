@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Auth\EloquentUserProvider;
 use Illuminate\Support\Facades\DB;
+
 use App\Models\Video;
+use App\Http\Requests\CreateVideosRequest;
 
 class PostsController extends Controller
 {
@@ -16,10 +18,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $videos = DB::table('videos')->get();
-        return view('post.posts')
-        ->with('title', 'Videos')
-        ->with('videos', $videos);
+        $videos = Video::all();
+
+        return view ("post.posts", compact("videos"));
     }
 
     /**
@@ -38,9 +39,14 @@ class PostsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateVideosRequest $request)
     {
-        //
+        $video = new Video;
+
+        $video->title = $request->title;
+        $video->zelda = $request->zelda;
+
+        $video->save();
     }
 
     /**
@@ -51,7 +57,9 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $video = Video::findOrFail($id);
+
+        return view("post.show", compact("video"));
     }
 
     /**
@@ -62,7 +70,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $video = Video::findOrFail($id);
+
+        return view("post.edit", compact("video"));
     }
 
     /**
@@ -72,9 +82,13 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CreateVideosRequest $request, $id)
     {
-        return view("post.update");
+        $video = Video::findOrFail($id);
+
+        $video->update($request->all());
+
+        return redirect("/post");
     }
 
     /**
@@ -85,6 +99,10 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        return view("post.delete");
+        $video = Video::findOrFail($id);
+
+        $video->delete();
+
+        return redirect("/post");
     }
 }

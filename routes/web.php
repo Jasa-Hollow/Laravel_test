@@ -36,12 +36,14 @@ Route::get('/about', [PagesController::class, 'about']);
 Route::get('/contact', [PagesController::class, 'contact']);
 // -----------------------------------------------------------------------
 
-// -----------------------------------------------------------------------
-// Rutas para el CRUD
-Route::get('/post/', [PostsController::class, 'index']);
-Route::get('/post/index', [PostsController::class, 'index']);
+/* -----------------------------------------------------------------------
+|
+|   Se ha realizado un cambio, en el que Laravel automáticamente detecta las rutas
+|   por medio del "resource" al crear el controlador.
+|
+|   Se puede verificar por la terminal con el comando "php artisan route:list".
+*/
 
-Route::get('/post/create', [PostsController::class, 'create']);
-Route::get('/post/update', [PostsController::class, 'update']);
-Route::get('/post/delete', [PostsController::class, 'destroy']);
+Route::resource('/post', PostsController::class);
+
 // -----------------------------------------------------------------------
