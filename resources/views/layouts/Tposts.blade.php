@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/05f4903dc9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="uk-cover-container uk-height-small">
+    <div class="uk-cover-container uk-height-small navNav">
         <img src="{{ asset('img/header.svg') }}" alt="" uk-cover>
         <nav class="uk-navbar-container" uk-navbar>
             <div class="uk-navbar-left">
@@ -38,6 +38,11 @@
                         <a href="/post/"><i class="fab fa-youtube"></i> Videos</a>
                     </li>
                 </ul>
+            </div>
+            <div class="uk-navbar-right">
+                <a href="/post/create">
+                    <button class="uk-button uk-button-primary"> Add </button>
+                </a>
             </div>
         </nav>
         <h1 class="uk-position-center uk-text-center">
