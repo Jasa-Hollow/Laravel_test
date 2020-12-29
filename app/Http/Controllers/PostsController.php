@@ -47,6 +47,8 @@ class PostsController extends Controller
         $video->zelda = $request->zelda;
 
         $video->save();
+
+        return redirect("/post");
     }
 
     /**

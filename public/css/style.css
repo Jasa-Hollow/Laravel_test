@@ -5,6 +5,32 @@ body {
     margin-bottom: 100px;
 }
 
+/* -----------------------------*/
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+    width:10px;
+}
+body::-webkit-scrollbar-button:increment,body::-webkit-scrollbar-button {
+    display: none;
+} 
+body::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #f04305;
+    border-radius: 20px;
+    border: 2px solid #FF5300;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color:none;
+    background:none;
+}
+
+/* -----------------------------*/
+
 .uk-navbar-left, .uk-navbar-container{ 
     background-color:none !important;
     background:none !important;
@@ -25,12 +51,20 @@ body {
     border-radius: 6px;
 }
 
+.uk-button-danger {
+    margin-bottom: 30px !important;
+}
+
 .uk-navbar-right {
     padding-right: 10px;
 }
 
 .uk-background-secondary {
     border-radius: 10px;
+}
+
+#index_descr {
+    margin-bottom: 30px !important;
 }
 
 .allvid {
