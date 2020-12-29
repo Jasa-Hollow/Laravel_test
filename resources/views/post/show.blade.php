@@ -1,10 +1,11 @@
 <!-- Hereda la plantilla definida. -->
-@extends('../layouts.Tposts')
+@extends('../layouts.Tposts') @extends('../layouts.navbar')
 
 <!-- ............................................... -->
 <!-- Título de la pestaña -->
 @php
-$title = "Hilos de Fuego";
+    $title = "Hilos de Fuego";
+    $nav = ["../", "../about", "../contact", "/post/"];
 @endphp
 <!-- ............................................... -->
 

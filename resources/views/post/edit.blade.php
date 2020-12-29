@@ -1,10 +1,11 @@
 <!-- Hereda la plantilla definida. -->
-@extends('../layouts.Tposts')
+@extends('../layouts.Tposts') @extends('../layouts.navbar')
 
 <!-- ............................................... -->
 <!-- Título de la pestaña -->
 @php
-$title = "Hilos de Fuego";
+    $title = "Hilos de Fuego";
+    $nav = ["../../", "../../about", "../../contact", "../"];
 @endphp
 <!-- ............................................... -->
 
@@ -13,13 +14,14 @@ $title = "Hilos de Fuego";
 @section('conten')
     <hr class="uk-divider-icon">
     <form method="post" action="/post/{{ $video->id }}">
-        <fieldset class="uk-fieldset">
+        <div class="uk-card uk-card-default uk-card-body">
+            <fieldset class="uk-fieldset">
 
             <legend class="uk-legend">
                 Edit post
             </legend>
 
-            <div class="uk-margin">
+            <div class="uk-margin uk-text-left">
                 <legend class="uk-legend"> Title </legend>
                 <input class="uk-input" name="title" value="{{ $video->title }}" type="text" placeholder="Title of video" autocomplete="off">
                 <!--  -->
@@ -27,7 +29,7 @@ $title = "Hilos de Fuego";
                 <input type="hidden" name="_method" value="PUT">
             </div>
 
-            <div class="uk-margin">
+            <div class="uk-margin uk-text-left">
                 <legend class="uk-legend"> Embed Link </legend>
                 <textarea class="uk-textarea" name="zelda" rows="5" placeholder="Embed link of the video">{{ $video->zelda }}</textarea>
             </div>
@@ -36,6 +38,7 @@ $title = "Hilos de Fuego";
                 Update video
             </button>
         </fieldset>
+        </div>
     </form>
     @if (count($errors) > 0)
         @foreach($errors->all() as $error)

@@ -17,33 +17,6 @@
     <script src="https://kit.fontawesome.com/05f4903dc9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="uk-cover-container uk-height-medium">
-        <img src="{{ asset('img/header.svg') }}" alt="" uk-cover>
-        <nav class="uk-navbar-container" uk-navbar>
-            <div class="uk-navbar-left">
-                <a class="uk-navbar-item uk-logo" href="/home">
-                    <img src="{{ asset('img/logo_jasa.png') }}">
-                </a>
-                <ul class="uk-navbar-nav">
-                    <li>
-                        <a href="/"><i class="fas fa-home"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="/about"><i class="fas fa-user-astronaut"></i> About</a>
-                    </li>
-                    <li>
-                        <a href="/contact"><i class="fas fa-feather"></i> Contact</a>
-                    </li>
-                    <li>
-                        <a href="/post/"><i class="fab fa-youtube"></i> Videos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="uk-position-center uk-text-center">
-            @yield('header')
-        </div>
-    </div>
     <div class="uk-container uk-text-center">
         <section uk-grid>
             <div class="uk-width-1-3@m">
@@ -62,6 +35,13 @@
             <div class="uk-width-1-3@m">
                 <div class="uk-card uk-card-default uk-card-body">
                     @yield('card3')
+                </div>
+            </div>
+
+            <div class="uk-width-1" id="index_descr">
+                <div class="uk-card uk-card-default uk-card-body uk-text-left">
+                    <!-- Haciendo uso de "Blade" de Laravel. -->
+                    @yield("card4")
                 </div>
             </div>
         </section>

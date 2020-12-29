@@ -1,20 +1,24 @@
 <!-- Hereda la plantilla definida. -->
 @extends('layouts.template')
+@extends('layouts.navbar')
 
 <!-- ............................................... -->
 <!-- Título de la pestaña -->
 @php
     $title = "Contact";
+    $nav = ["/", "/about", "/contact", "/post/"];
 @endphp
 <!-- ............................................... -->
 
 <!-- ............................................... -->
 <!-- Encabezado -->
-@section('header')
+@section('navbar')
+    @section('header')
     <h1 class="uk-heading-small header-text">Contact</h1>
     <p>
         Aquí es donde pondría mi correo electrónico... pero todavía no por si acaso.
     </p>
+    @endsection
 @endsection
 <!-- ............................................... -->
 
@@ -48,5 +52,12 @@
     <a href="/post/" class="youtube-btn">
         <i class="fab fa-youtube fa-4x"></i>
     </a>
+@endsection
+<!-- ............................................... -->
+
+<!-- ............................................... -->
+<!-- Cuarta tarjeta -->
+@section('card4')
+    <hr class="uk-divider-icon">
 @endsection
 <!-- ............................................... -->
