@@ -23,25 +23,27 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 # Tests
 *My first steps in this framework.*
-```
+
+This site was built using YouTube channel: [Hilos de Fuego](https://www.youtube.com/channel/UCm-g2KbMuqYgLU15wz0JYWg).
+
 ## First tests
-
+```
 It's very simple, using UIkit instead of Bootstrap.
-
+```
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/secondTest.png)
 
 ## Second tests
-
+```
 Well, two days after, I made litle changes, and already preparing things for the CRUD.
-
+```
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/thirdTest.png)
 
 ## Third tests?
-
-I add new registers in the DB (MySQL), and are of my YouTube videos channel !
-
-![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/fourthTest.png)
 ```
+I add new registers in the DB (MySQL), and are of my YouTube videos channel !
+```
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/fourthTest.png)
+
 
 # CRUD
 
@@ -49,8 +51,15 @@ I add new registers in the DB (MySQL), and are of my YouTube videos channel !
 I developed a CRUD with Laravel because I'm studying this framework actually.*
 
 ###### *Create*
-
+```
+First, I created a href to go the create new register's page.
+```
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/C-1.png)
+
+```
+Then, you can see the form, with title and embed link input.
+```
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/C-2.png)
 
 ## License
 
