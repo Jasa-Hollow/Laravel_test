@@ -47,6 +47,10 @@ I add new registers in the DB (MySQL), and are of my YouTube videos channel !
 *Okay, trying to be a good developer, I explain what is a CRUD. Is the acronym of Create, Read, Update and Delete.
 I developed a CRUD with Laravel because I'm studying this framework actually.*
 
+###### *Create*
+
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/C-1.png)
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
