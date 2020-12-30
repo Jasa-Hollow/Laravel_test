@@ -61,6 +61,17 @@ Then, you can see the form, with title and embed link input.
 ```
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/C-2.png)
 
+###### *Read*
+```
+Okay, to start with, I tell you that it already brings the information from MySQL automatically, but it can also be viewed individually. Selecting "See it!" in the options.
+```
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/R-1.png)
+
+```
+Then, you'll see the video you selected before.
+```
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/R-2.png)
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
