@@ -63,14 +63,35 @@ Then, you can see the form, with title and embed link input.
 
 ###### *Read*
 ```
-Okay, to start with, I tell you that it already brings the information from MySQL automatically, but it can also be viewed individually. Selecting "See it!" in the options.
+Okay, to start with, I tell you that it already brings the information from MySQL automatically, 
+but it can also be viewed individually. Selecting "See it!" in the options.
 ```
+
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/R-1.png)
 
 ```
 Then, you'll see the video you selected before.
 ```
+
 ![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/R-2.png)
+
+###### *Update*
+```
+You remind the options we saw in the first "Read" image? 
+If you'll select "Edit" option, other view will load.
+```
+In this, all the values attributes of "input" come from MySQL database, and you can edit these and update.
+
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/U-1.png)
+
+###### *Delete*
+```
+Don't move from that page!
+In it, if you go below from the above, you'll find
+the video that has been selected, and below, the option to delete it.
+```
+
+![testImage](https://raw.githubusercontent.com/Jasa-Hollow/Laravel_test/main/crud_img/D-1.png)
 
 ## License
 
